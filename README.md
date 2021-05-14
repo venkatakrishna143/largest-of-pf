@@ -9,11 +9,14 @@ long long getMaxPrimefactor(long long n) {
       maxPF = 2;
       n /= 2;
    }
+   int t;
+   while(t--){
    for (int i = 3; i <= sqrt(n); i += 2) {
       while (n % i == 0) {
          maxPF = i;
          n = n / i;
       }
+   }
    }
    if (n > 2)
    maxPF = n;
